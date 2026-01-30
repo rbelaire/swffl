@@ -27,7 +27,7 @@ body {
 h1,
 h2,
 h3,
-.brand-mark,
+.brand-logo,
 .metric-value,
 .card-value {
   font-family: "Rajdhani", "Barlow", sans-serif;
@@ -62,13 +62,13 @@ h3,
   gap: 16px;
 }
 
-.brand-mark {
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 1.1rem;
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #111;
+  padding: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 .brand-title {
@@ -193,6 +193,20 @@ h3,
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.panel-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #111;
+  padding: 4px;
 }
 
 .pill {
@@ -436,6 +450,15 @@ h3,
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: #111;
+  padding: 4px;
 }
 
 .footer-links {
