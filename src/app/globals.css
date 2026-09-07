@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-navy-950 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-navy text-white;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  /* Section eyebrow label */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-navy-500;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500
+           disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-navy text-white hover:bg-navy-700;
+  }
+  .btn-ghost {
+    @apply btn border border-navy-900/15 bg-white text-navy-900 hover:border-navy-900/30 hover:bg-navy-900/[0.03];
+  }
+  .btn-danger {
+    @apply btn border border-red-200 bg-white text-red-700 hover:bg-red-50;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-xl border border-navy-900/10 bg-white shadow-card;
+  }
+
+  /* Form controls */
+  .field {
+    @apply w-full rounded-lg border border-navy-900/15 bg-white px-3 py-2 text-sm text-navy-950
+           placeholder:text-navy-900/40 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-navy-900;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-navy {
+    @apply badge bg-navy-900/[0.06] text-navy-800;
+  }
+  .badge-gold {
+    @apply badge bg-gold/15 text-[#8a6d1f];
+  }
+
+  /* Table shell */
+  .stat-table {
+    @apply w-full border-collapse text-sm;
+  }
+  .stat-table th {
+    @apply border-b border-navy-900/10 px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider text-navy-500;
+  }
+  .stat-table td {
+    @apply border-b border-navy-900/[0.06] px-3 py-3 text-navy-900;
+  }
+  .stat-table tbody tr:hover {
+    @apply bg-navy-900/[0.02];
+  }
+}
